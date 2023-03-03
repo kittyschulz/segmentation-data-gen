@@ -4,6 +4,7 @@
 
 Image segmentation is a challenging and important task in computer vision, with applications in medical imaging, robotics, autonomous driving, and scene understanding. Segmentation models require large amounts of labeled training data, and data is often difficult and time-consuming to acquire. This pipeline addresses the issue by utilizing the OpenAI API to generate synthetic training data that is both diverse and realistic. By leveraging state-of-the-art generative models, the pipeline is able to create large amounts of high-quality training data in a fraction of the time and cost it would take to manually label real-world images. 
 
+Below several different images and their ground truth segmentation masks are shown, all of which have been generated using the pipeline in this project that exploits the OpenAI image generation, image editing, and text completion APIs.
 ![Examples of training data generated.](vis/training_examples.png)
 
 ## Applications
@@ -54,5 +55,3 @@ To use this pipeline or play around with the demos, you will need to have the fo
 * cv2
 * urllib
 * openai with an OpenAI API key
-
-Alternatively, you can upload the Jupyter Notebook to [Google Colab](https://colab.research.google.com/) where most of the requirements should already be satisfied.
