@@ -55,3 +55,5 @@ To use this pipeline or play around with the demos, you will need to have the fo
 * cv2
 * urllib
 * openai with an OpenAI API key
+
+Alternatively, you can try running the code in [Google Colab](https://colab.research.google.com/drive/1VWpLdrOYZ3AWUG8DveKJr6A3NNnMwW8D?usp=sharing) which requires no setup.
