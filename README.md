@@ -10,15 +10,15 @@ This method uses the `openai.Completion.create()`, `openai.Image.create()`, and 
 
 1. Given a subject provided by the user (e.g., "dog", "coffee cup"), the pipeline first calls `openai.Image.create()` to generate an image of the subject on a "greenscreen"-like background. 
 
-![Example "greenscreen" images.](./greenscreen_outputs.png)
+![Example "greenscreen" images.](vis/greenscreen_outputs.png)
 
 2. Using image thresholding with OpenCV, the subject is segmented from the background and a segmentation mask for the image is generated. The original image has the alpha channel added to match the segmentation mask.
 
-![Example output of masking step.](./masking_example.png)
+![Example output of masking step.](vis/masking_example.png)
 
 3. "Ideas" for backgrounds for the new training data are created by calling the `openai.Completion.create()` method. The prompt passed with this function includes the subject of the image to help generate more realistic backgrounds. For each new image to be created, a background is randomly sampled from this list and then inserted into a prompt to be used in conjunction with `Image.create_edit()`.
 
-![Example of outputs with different backgrounds.](./final_outputs.png)
+![Example of outputs with different backgrounds.](vis/final_outputs.png)
 
 The pipeline automatically creates two new directories within the current path, `"images"` and `"masks"`, unless alternative directories are provided when calling `generate_examples`. The generated images with backgrounds and the segementation masks will be stored in their respective directories. This allows the user to easily create datasets and dataloaders in frameworks like [PyTorch](https://pytorch.org/tutorials/beginner/data_loading_tutorial.html) after generating the images to easily train or fine-tune models. 
 
@@ -32,7 +32,7 @@ This pipeline works well for generating single-subject trainings images for segm
 
 Some example outputs have been shown below:
 
-![Example outputs from the pipeline.](./output_examples.png)
+![Example outputs from the pipeline.](vis/output_examples.png)
 
 A demo that will produce three example outputs can be easily run from the terminal by calling `demo.py`. The function assumes that the user has their API key stored in an environment variable `"OPENAI_API_KEY"`. 
 
