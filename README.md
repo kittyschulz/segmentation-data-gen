@@ -2,6 +2,8 @@
 
 ## Overview
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]([https://colab.research.google.com/github/weiji14/deepbedmap/](https://colab.research.google.com/drive/1VWpLdrOYZ3AWUG8DveKJr6A3NNnMwW8D?usp=sharing)https://colab.research.google.com/drive/1VWpLdrOYZ3AWUG8DveKJr6A3NNnMwW8D?usp=sharing)
+
 Image segmentation is a challenging and important task in computer vision, with applications in medical imaging, robotics, autonomous driving, and scene understanding. Segmentation models require large amounts of labeled training data, and data is often difficult and time-consuming to acquire. This pipeline addresses the issue by utilizing the OpenAI API to generate synthetic training data that is both diverse and realistic. By leveraging state-of-the-art generative models, the pipeline is able to create large amounts of high-quality training data in a fraction of the time and cost it would take to manually label real-world images. 
 
 Below several different images and their ground truth segmentation masks are shown, all of which have been generated using the pipeline in this project that exploits the OpenAI image generation, image editing, and text completion APIs.
@@ -57,3 +59,4 @@ To use this pipeline or play around with the demos, you will need to have the fo
 * openai with an OpenAI API key
 
 Alternatively, you can try running the code in [Google Colab](https://colab.research.google.com/drive/1VWpLdrOYZ3AWUG8DveKJr6A3NNnMwW8D?usp=sharing) which requires no setup.
+
